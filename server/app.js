@@ -21,8 +21,8 @@ app.get("/", async (req, res) => {
 
 app.use("/api/public", publicRouter);
 app.use(authMiddleware);
-app.use("api/private/users",userRouter)
-app.use("api/private/masjids",masjidRouter)
+app.use("/api/private/users",userRouter)
+app.use("/api/private/masjids",masjidRouter)
 app.listen(PORT, () => {
   console.log(`Server is up and listening ${PORT}`);
 });
